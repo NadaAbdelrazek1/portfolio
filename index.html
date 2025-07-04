@@ -6,18 +6,105 @@
   <title>Nada Abdelrazek | UX/UI Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Inter', sans-serif; background: #fefefe; color: #333; }
-    header { background: #141E46; color: white; padding: 80px 20px; text-align: center; }
-    header h1 { margin: 0; font-size: 40px; }
-    header p { margin-top: 10px; font-size: 20px; }
-    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
-    h2 { color: #141E46; font-size: 30px; border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-bottom: 30px; }
-    .project, .certs li, .skills li { margin-bottom: 20px; }
-    .project a { color: #0077cc; text-decoration: none; }
-    .skills ul, .certs ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
-    .skills li, .certs li { background: #e3eaf5; padding: 8px 16px; border-radius: 6px; }
-    footer { background: #f1f1f1; padding: 30px 20px; text-align: center; font-size: 14px; color: #555; }
-    a { color: #141E46; text-decoration: none; }
+    body { margin: 0; font-family: 'Inter', sans-serif; background: #fefefe; color: #333; overflow-x: hidden; scroll-behavior: smooth; }
+    header {
+      background: linear-gradient(135deg, #141E46, #253c78);
+      color: white;
+      padding: 100px 20px 60px;
+      text-align: center;
+      perspective: 1000px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 50px;
+      transform: rotateY(10deg);
+      display: inline-block;
+      animation: float 5s ease-in-out infinite;
+    }
+    header p {
+      margin-top: 15px;
+      font-size: 22px;
+    }
+    @keyframes float {
+      0% { transform: rotateY(10deg) translateY(0); }
+      50% { transform: rotateY(10deg) translateY(-10px); }
+      100% { transform: rotateY(10deg) translateY(0); }
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease forwards;
+    }
+    section:nth-of-type(2) { animation-delay: 0.3s; }
+    section:nth-of-type(3) { animation-delay: 0.6s; }
+    section:nth-of-type(4) { animation-delay: 0.9s; }
+    section:nth-of-type(5) { animation-delay: 1.2s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    h2 {
+      color: #141E46;
+      font-size: 32px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+    .project, .certs li, .skills li {
+      margin-bottom: 20px;
+    }
+    .project a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    .skills ul, .certs ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skills li, .certs li {
+      background: linear-gradient(135deg, #e3eaf5, #ffffff);
+      padding: 10px 18px;
+      border-radius: 12px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.08);
+    }
+    .download-cv {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .download-cv a {
+      background: #141E46;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+    .download-cv a:hover {
+      background: #253c78;
+    }
+    footer {
+      background: #f1f1f1;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+    }
+    a {
+      color: #141E46;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -87,6 +174,9 @@
     <p>Email: <a href="mailto:nadaabdelrazek8@gmail.com">nadaabdelrazek8@gmail.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/nada-abdelrazek-654816254/" target="_blank">linkedin.com/in/nada-abdelrazek</a></p>
     <p>Phone: +201028157320</p>
+    <div class="download-cv">
+      <a href="Nada%20Abdelrazek.pdf" download>Download My CV</a>
+    </div>
   </section>
 
   <footer>
